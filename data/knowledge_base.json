@@ -1,0 +1,42 @@
+{
+    "domains": {
+        "nutrition": {
+            "general": {
+                "tips": ["Balanced diet essential", "Proper hydration", "Meal timing"],
+                "macros": {"protein": "1.6-2.2g/kg", "carbs": "3-5g/kg", "fats": "0.5-1.5g/kg"}
+            },
+            "sports_specific": {
+                "endurance": {"carb_loading": "7-10g/kg", "hydration": "500-600ml/hr"},
+                "strength": {"protein_timing": "20-40g post-workout", "creatine": "5g daily"}
+            }
+        },
+        "training": {
+            "workout_plans": {
+                "beginner": ["Full body 3x/week", "Basic compound movements"],
+                "intermediate": ["Split routines", "Progressive overload"],
+                "advanced": ["Periodization", "Sport-specific training"]
+            },
+            "form_guidance": {
+                "squat": ["Keep chest up", "Knees in line with toes"],
+                "deadlift": ["Neutral spine", "Bar against shins"],
+                "bench_press": ["Retract scapula", "Feet planted firmly"]
+            }
+        },
+        "recovery": {
+            "sleep": {
+                "optimal_duration": "7-9 hours",
+                "tips": ["Consistent schedule", "Dark room", "Cool temperature"]
+            },
+            "mobility": {
+                "stretches": ["Dynamic warm-up", "Static cool-down"],
+                "tools": ["Foam roller", "Massage ball", "Compression gear"]
+            }
+        },
+        "injury_prevention": {
+            "common_issues": {
+                "runner_knee": ["Symptoms", "Prevention", "Recovery"],
+                "back_pain": ["Proper form", "Core strength", "Flexibility"]
+            }
+        }
+    }
+}

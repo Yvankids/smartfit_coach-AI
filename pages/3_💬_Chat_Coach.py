@@ -1,14 +1,53 @@
 import streamlit as st
-from fitness_chatbot import FitnessChat
-from response_handler import ResponseHandler
+from response_handler import FitnessAIAssistant
+
+# Authentication check
+if 'authenticated' not in st.session_state or not st.session_state.authenticated:
+    st.switch_page("Login.py")
+
+st.markdown("""
+<style>
+    .chat-container {
+        max-width: 800px;
+        margin: auto;
+    }
+    .chat-message {
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .user-message {
+        background: #E0E7FF;
+        margin-left: 2rem;
+    }
+    .bot-message {
+        background: #F3F4F6;
+        margin-right: 2rem;
+    }
+    .suggestions {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+    }
+    .suggestion-chip {
+        background: #4F46E5;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 def init_chat():
-    if 'chat_history' not in st.session_state:
+    if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
-    if 'chatbot' not in st.session_state:
-        st.session_state.chatbot = FitnessChat()
-    if 'handler' not in st.session_state:
-        st.session_state.handler = ResponseHandler()
+    if "handler" not in st.session_state:
+        st.session_state.handler = FitnessAIAssistant()
+    if "chatbot" not in st.session_state:
+        st.session_state.chatbot = None
 
 def main():
     st.title("SmartFit Coach AI Assistant")
